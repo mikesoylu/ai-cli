@@ -1,0 +1,25 @@
+{
+  "name": "ai-cli",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "oxfmt && oxlint --config .oxlintrc.jsonc --type-aware --fix",
+    "start": "bun index.ts",
+    "build": "bun build ./index.ts --compile --outfile ai"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxfmt": "^0.15.0",
+    "oxlint": "^1.30.0",
+    "oxlint-tsgolint": "^0.8.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.55",
+    "ai": "^5.0.112",
+    "zod": "^4.1.13"
+  }
+}
